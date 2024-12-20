@@ -7,7 +7,7 @@ const ContactForm = ({ onAddContact }) => {
   const initialValues = { name: '', number: '' };
   const validationSchema = Yup.object({
     name: Yup.string().min(3).max(50).required('Name is required'),
-    number: Yup.number().required('Number is required'),
+    number: Yup.string().required('Number is required'),
   });
 
   const handleSubmit = (values, { resetForm }) => {
